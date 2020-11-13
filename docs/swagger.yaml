@@ -1,0 +1,345 @@
+basePath: /api/v1/book
+definitions:
+  Models.Book:
+    properties:
+      author:
+        type: string
+      category_ids:
+        items:
+          type: string
+        type: array
+      code:
+        type: string
+      comment_id:
+        items:
+          type: string
+        type: array
+      id:
+        type: string
+      images:
+        items:
+          type: string
+        type: array
+      name:
+        type: string
+      price:
+        type: number
+      quantity:
+        type: integer
+      related_book_ids:
+        items:
+          type: string
+        type: array
+      status:
+        type: boolean
+    type: object
+  Models.Category:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      status:
+        type: boolean
+    type: object
+  payload.Category:
+    properties:
+      name:
+        type: string
+      status:
+        type: boolean
+    type: object
+  payload.CreateBookPayload:
+    properties:
+      author:
+        type: string
+      category_ids:
+        items:
+          type: string
+        type: array
+      code:
+        type: string
+      images:
+        items:
+          type: string
+        type: array
+      name:
+        type: string
+      price:
+        type: number
+      quantity:
+        type: integer
+      status:
+        type: boolean
+    type: object
+  response.CategoryResponse:
+    properties:
+      category:
+        $ref: '#/definitions/Models.Category'
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  response.CreateBookResponse:
+    properties:
+      data:
+        $ref: '#/definitions/Models.Book'
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  response.GetBookByIdResponse:
+    properties:
+      data:
+        $ref: '#/definitions/Models.Book'
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  response.ListBooksResponse:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/Models.Book'
+        type: array
+      message:
+        type: string
+      page:
+        type: integer
+      page_size:
+        type: integer
+      success:
+        type: boolean
+      total:
+        type: integer
+    type: object
+  response.ListCategoryResponse:
+    properties:
+      category:
+        items:
+          $ref: '#/definitions/Models.Category'
+        type: array
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  response.StatusProductResponse:
+    properties:
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  response.UpdateBookResponse:
+    properties:
+      data:
+        $ref: '#/definitions/Models.Book'
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+info:
+  contact: {}
+  description: This is list api for vvt product project
+  title: Swagger Book project API
+  version: "2.0"
+paths:
+  /books:
+    post:
+      consumes:
+      - application/json
+      description: create new book
+      parameters:
+      - description: product information
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/payload.CreateBookPayload'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.CreateBookResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create new book
+      tags:
+      - Book
+  /books/:
+    get:
+      consumes:
+      - application/json
+      description: list books
+      parameters:
+      - description: page
+        in: query
+        name: page
+        type: integer
+      - description: page size each page
+        in: query
+        name: page_size
+        type: integer
+      - description: code or name
+        in: query
+        name: text
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.ListBooksResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: get list books
+      tags:
+      - Book
+  /books/{id}:
+    get:
+      consumes:
+      - application/json
+      description: book by id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.GetBookByIdResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: get  book by id
+      tags:
+      - Book
+  /books/activate/{code}:
+    put:
+      consumes:
+      - application/json
+      description: update Book
+      parameters:
+      - description: code
+        in: path
+        name: code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.StatusProductResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Active Book by code
+      tags:
+      - Book
+  /books/deactivate/{code}:
+    put:
+      consumes:
+      - application/json
+      description: update Book
+      parameters:
+      - description: code
+        in: path
+        name: code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.UpdateBookResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: DeActive Book by code
+      tags:
+      - Book
+  /categories:
+    post:
+      consumes:
+      - application/json
+      description: create new book
+      parameters:
+      - description: product information
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/payload.Category'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.CategoryResponse'
+      summary: Create new book
+      tags:
+      - Category
+  /categories/:
+    get:
+      consumes:
+      - application/json
+      description: list Category
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.ListCategoryResponse'
+      summary: get list Category
+      tags:
+      - Category
+  /categories/{code}:
+    put:
+      consumes:
+      - application/json
+      description: update Book
+      parameters:
+      - description: category information
+        in: body
+        name: category
+        required: true
+        schema:
+          $ref: '#/definitions/payload.Category'
+      - description: code
+        in: path
+        name: code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.CategoryResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Active Book by code
+      tags:
+      - Category
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

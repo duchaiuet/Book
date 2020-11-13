@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b940cc6e-0e0c-46d2-a431-0f441131ee1d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Book.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Book.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Book.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/Book.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/Category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/payload/Book.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/payload/Category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/response/Book.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/response/Category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/DAL/Book.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/DAL/Category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/DAL/User.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/Models/Book.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/Models/Category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/Models/User.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/global.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/mongo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/paramater.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/swagger.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jk1Z2feT4BHAFKDXzOAwKqaAuW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../station" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Book\docs" />
+      <recent name="E:\Book\doc" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build mongo.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Book" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/Database/mongo.go" />
+      <package value="Book" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build mongo.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="752" y="358" key="#Go_Modules" timestamp="1604333551631">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="752" y="358" key="#Go_Modules/0.0.1920.1050@0.0.1920.1050" timestamp="1604333551631" />
+    <state x="444" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605191006330">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="444" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1605191006330" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1605180166629">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-840" y="197" key="FileChooserDialogImpl/0.0.1920.1050/-1366.0.1366.738@-1366.0.1366.738" timestamp="1604686985393" />
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605180166629" />
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1604393302028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302028" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1604393302028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302028" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1604393302028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302028" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1604393302028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302028" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1604393302029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302029" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1604393302029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302029" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1604393302028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302028" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1604393302029">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604393302029" />
+    <state x="461" y="170" key="SettingsEditor" timestamp="1604390159182">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604390159182" />
+    <state x="667" y="57" width="585" height="936" key="find.popup" timestamp="1604580706909">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="667" y="57" width="585" height="936" key="find.popup/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604580706909" />
+    <state x="803" y="286" key="refactoring.ChangeSignatureDialog" timestamp="1605022504827">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="803" y="286" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1604672017567" />
+    <state x="803" y="286" key="refactoring.ChangeSignatureDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1605022504827" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1605001585273">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1605001585273" />
+  </component>
+</project>
