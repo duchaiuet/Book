@@ -42,6 +42,15 @@ definitions:
       status:
         type: boolean
     type: object
+  Models.Role:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      status:
+        type: boolean
+    type: object
   payload.Category:
     properties:
       name:
@@ -69,6 +78,13 @@ definitions:
         type: number
       quantity:
         type: integer
+      status:
+        type: boolean
+    type: object
+  payload.Role:
+    properties:
+      name:
+        type: string
       status:
         type: boolean
     type: object
@@ -122,6 +138,15 @@ definitions:
         items:
           $ref: '#/definitions/Models.Category'
         type: array
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  response.RoleResponse:
+    properties:
+      data:
+        $ref: '#/definitions/Models.Role'
       message:
         type: string
       success:
@@ -337,6 +362,138 @@ paths:
       summary: Active Book by code
       tags:
       - Category
+  /roles:
+    get:
+      consumes:
+      - application/json
+      description: list roles
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.RoleResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: get list roles
+      tags:
+      - Role
+    post:
+      consumes:
+      - application/json
+      description: create new role
+      parameters:
+      - description: role information
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/payload.Role'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.RoleResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create new Role
+      tags:
+      - Role
+    put:
+      consumes:
+      - application/json
+      description: create new role
+      parameters:
+      - description: role information
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/payload.Role'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.RoleResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create new Role
+      tags:
+      - Role
+  /roles/{id}:
+    get:
+      consumes:
+      - application/json
+      description: role
+      parameters:
+      - description: id
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.ListBooksResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: get role
+      tags:
+      - Role
+  /roles/active/{id}:
+    put:
+      consumes:
+      - application/json
+      description: active role
+      parameters:
+      - description: id
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.ListBooksResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: active role
+      tags:
+      - Role
+  /roles/deactivate/{id}:
+    put:
+      consumes:
+      - application/json
+      description: active role
+      parameters:
+      - description: id
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.ListBooksResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: active role
+      tags:
+      - Role
 securityDefinitions:
   ApiKeyAuth:
     in: header

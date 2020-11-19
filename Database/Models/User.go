@@ -12,6 +12,7 @@ type Address struct {
 type User struct {
 	Id          primitive.ObjectID `json:"id" bson:"_id"`
 	Name        string             `json:"name" bson:"name"`
+	Code        string             `json:"code" bson:"code"`
 	Role        primitive.ObjectID `json:"role" bson:"role"`
 	UserName    string             `json:"user_name" bson:"user_name"`
 	Password    string             `json:"password" bson:"password"`
@@ -25,5 +26,4 @@ type UserRepository interface {
 	Gets() ([]*User, error)
 	Update(id string, user User) (*User, error)
 	UpdateStatus(id string, status bool) error
-
 }

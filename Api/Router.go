@@ -19,6 +19,7 @@ func Router() http.Handler {
 
 	bookController := Controller.NewBookController()
 	categoryController := Controller.NewCategoryController()
+	roleController := Controller.NewRoleController()
 	//authorization := middleware.NewAuthorizeMiddleware()
 
 	r.Get(basePath+"/swagger/*", httpSwagger.Handler(
@@ -39,6 +40,14 @@ func Router() http.Handler {
 				r.Get("/", categoryController.GetListCategory)
 				r.Get("/{code}", categoryController.GetCategoryById)
 				r.Put("/{code}", categoryController.UpdateCategory)
+			})
+			r.Route("/roles", func(r chi.Router) {
+				r.Post("/", roleController.CreateRole)
+				r.Get("/", roleController.GetList)
+				r.Get("/{id}", roleController.GetById)
+				r.Put("/{id}", roleController.Update)
+				r.Put("/active/{id}", roleController.Active)
+				r.Put("/deactivate/{id}", roleController.DeActive)
 			})
 		})
 

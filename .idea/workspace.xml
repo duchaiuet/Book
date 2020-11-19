@@ -11,35 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b940cc6e-0e0c-46d2-a431-0f441131ee1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Book.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Book.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/Book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/Category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/payload/Book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/payload/Category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/response/Book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/response/Category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/DAL/Book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/DAL/Category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/DAL/User.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Models/Book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Models/Category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Models/User.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/global.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/mongo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/paramater.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/swagger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/swagger.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Role.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/Role.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/payload/Role.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/response/Role.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/DAL/Role.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/Models/Role.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/Models/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Models/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/paramater.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/paramater.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docs.go" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +61,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../station" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
