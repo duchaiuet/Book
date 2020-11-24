@@ -65,7 +65,7 @@ func (u userController) Create(w http.ResponseWriter, r *http.Request) {
 		Password:    pl.Password,
 		PhoneNumber: pl.PhoneNumber,
 		Address:     add,
-		Status: true,
+		Status:      true,
 	}
 	data, err := u.userBusiness.Create(user)
 
@@ -186,7 +186,7 @@ func (u userController) GetById(w http.ResponseWriter, r *http.Request) {
 // @Produce json
 // @Security ApiKeyAuth
 // @Param id path string true "id"
-// @Success 200 {object} response.UpdateUserResponse
+// @Success 200 {object} response.StatusUserResponse
 // @Router /users/activate/{id} [put]
 func (u userController) Active(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
@@ -195,44 +195,23 @@ func (u userController) Active(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(400), 400)
 		return
 	}
-	res := &response.UpdateUserResponse{}
-	user, err := u.userBusiness.Get(id)
+	res := &response.StatusUserResponse{}
+
+	err := u.userBusiness.UpdateStatus(id, true)
 	if err != nil {
-		res = &response.UpdateUserResponse{
-			Meta: response.Meta{
-				Success: false,
-				Message: err.Error(),
-			},
-			Data: nil,
-		}
-	}
-	userUpdate := Models.User{
-		Id:          user.Id,
-		Name:        user.Name,
-		Code:        user.Code,
-		Role:       user.Role,
-		UserName:    user.UserName,
-		Password:    user.Password,
-		PhoneNumber: user.PhoneNumber,
-		Address:     user.Address,
-		Status:      true,
-	}
-	result, err := u.userBusiness.Update(userUpdate)
-	if err != nil {
-		res = &response.UpdateUserResponse{
-			Data: nil,
+		res = &response.StatusUserResponse{
+
 			Meta: response.Meta{
 				Success: false,
 				Message: err.Error(),
 			},
 		}
 	} else {
-		res = &response.UpdateUserResponse{
+		res = &response.StatusUserResponse{
 			Meta: response.Meta{
 				Success: true,
 				Message: "Success",
 			},
-			Data: result,
 		}
 	}
 	render.JSON(w, r, res)
@@ -246,7 +225,7 @@ func (u userController) Active(w http.ResponseWriter, r *http.Request) {
 // @Produce json
 // @Security ApiKeyAuth
 // @Param id path string true "id"
-// @Success 200 {object} response.UpdateUserResponse
+// @Success 200 {object} response.StatusUserResponse
 // @Router /users/deactivate/{id} [put]
 func (u userController) DeActive(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
@@ -255,45 +234,23 @@ func (u userController) DeActive(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(400), 400)
 		return
 	}
-	res := &response.UpdateUserResponse{}
-	user, err := u.userBusiness.Get(id)
-	if err != nil {
-		res = &response.UpdateUserResponse{
-			Meta: response.Meta{
-				Success: false,
-				Message: err.Error(),
-			},
-			Data: nil,
-		}
-	}
+	res := &response.StatusUserResponse{}
 
-	userUpdate := Models.User{
-		Id:          user.Id,
-		Name:        user.Name,
-		Code:        user.Code,
-		Role:       user.Role,
-		UserName:    user.UserName,
-		Password:    user.Password,
-		PhoneNumber: user.PhoneNumber,
-		Address:     user.Address,
-		Status:      false,
-	}
-	result, err := u.userBusiness.Update(userUpdate)
+	err := u.userBusiness.UpdateStatus(id, false)
 	if err != nil {
-		res = &response.UpdateUserResponse{
-			Data: nil,
+		res = &response.StatusUserResponse{
+
 			Meta: response.Meta{
 				Success: false,
 				Message: err.Error(),
 			},
 		}
 	} else {
-		res = &response.UpdateUserResponse{
+		res = &response.StatusUserResponse{
 			Meta: response.Meta{
 				Success: true,
 				Message: "Success",
 			},
-			Data: result,
 		}
 	}
 	render.JSON(w, r, res)

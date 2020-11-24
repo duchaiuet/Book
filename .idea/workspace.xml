@@ -11,20 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b940cc6e-0e0c-46d2-a431-0f441131ee1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Business/User.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/User.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/payload/User.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/response/User.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Book.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Book.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/DAL/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/DAL/User.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Models/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Models/User.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs.go" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Business/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/response/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/response/User.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

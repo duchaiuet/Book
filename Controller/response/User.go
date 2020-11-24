@@ -14,6 +14,10 @@ type UpdateUserResponse struct {
 	Meta
 	Data *Models.User `json:"data"`
 }
+type StatusUserResponse struct {
+	Meta
+	Data *Models.User `json:"data"`
+}
 
 type GetUserByIdResponse struct {
 	Meta

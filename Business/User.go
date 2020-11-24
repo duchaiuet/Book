@@ -14,6 +14,15 @@ type userBusiness struct {
 	userRepository Models.UserRepository
 }
 
+func (u userBusiness) UpdateStatus(id string, status bool) error {
+	err := u.userRepository.UpdateStatus(id, status)
+	if err != nil {
+		Database.ErrLog.Print(err)
+		return  err
+	}
+	return err
+}
+
 func (u userBusiness) Create(user Models.User) (*Models.User, error) {
 	code, err := u.GenCodeOrder()
 	if err != nil {
@@ -60,6 +69,7 @@ type UserBusiness interface {
 	GetAll() ([]*Models.User, error)
 	Get(id string)( *Models.User, error)
 	Update(user Models.User) (*Models.User, error)
+	UpdateStatus(id string, status bool) error
 	GenCodeOrder() (code string, err error)
 }
 
