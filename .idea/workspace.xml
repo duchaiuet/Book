@@ -11,19 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b940cc6e-0e0c-46d2-a431-0f441131ee1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Business/Role.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/Role.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/payload/Role.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/response/Role.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/DAL/Role.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Models/Role.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/User.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/User.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/payload/User.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/response/User.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Book.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/DAL/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/DAL/User.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/Models/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Models/User.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/paramater.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/paramater.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/docs.go" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,11 +118,12 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="444" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1605191006330" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1605180166629">
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1605765035599">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-840" y="197" key="FileChooserDialogImpl/0.0.1920.1050/-1366.0.1366.738@-1366.0.1366.738" timestamp="1604686985393" />
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605180166629" />
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1605765035599" />
     <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1604393302028">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

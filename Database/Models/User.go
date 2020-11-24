@@ -18,6 +18,7 @@ type User struct {
 	Password    string             `json:"password" bson:"password"`
 	PhoneNumber string             `json:"phone_number" bson:"phone_number"`
 	Address     Address            `json:"address" bson:"address"`
+	Status      bool               `json:"status" bson:"status"`
 }
 
 type UserRepository interface {

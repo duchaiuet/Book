@@ -36,6 +36,7 @@ func (u userRepository) UpdateStatus(id string, status bool) error {
 }
 
 func (u userRepository) Create(user Models.User) (*Models.User, error) {
+	user.Id = primitive.NewObjectID()
 	result, err := u.UserCollection.InsertOne(context.TODO(), user)
 	if err != nil {
 		return nil, err
