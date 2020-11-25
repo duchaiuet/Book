@@ -55,8 +55,8 @@ func (u userBusiness) Get(id string) (*Models.User, error) {
 	return result, err
 }
 
-func (u userBusiness) Update(user Models.User) (*Models.User, error) {
-	result, err := u.userRepository.Update(user.Id.String(),user)
+func (u userBusiness) Update(id string, user Models.User) (*Models.User, error) {
+	result, err := u.userRepository.Update(id,user)
 	if err != nil {
 		Database.ErrLog.Print(err)
 		return nil, err
@@ -68,7 +68,7 @@ type UserBusiness interface {
 	Create(user Models.User) (*Models.User, error)
 	GetAll() ([]*Models.User, error)
 	Get(id string)( *Models.User, error)
-	Update(user Models.User) (*Models.User, error)
+	Update(id string, user Models.User) (*Models.User, error)
 	UpdateStatus(id string, status bool) error
 	GenCodeOrder() (code string, err error)
 }

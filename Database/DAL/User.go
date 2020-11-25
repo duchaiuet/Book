@@ -91,14 +91,19 @@ func (u userRepository) Update(id string, user Models.User) (*Models.User, error
 	filter := bson.M{
 		"_id": newId,
 	}
-	update := bson.M{"$set": user}
-
-	result, err := u.UserCollection.UpdateOne(context.TODO(), filter, update)
+	update := bson.M{"$set": bson.M{
+		"name":  user.Name,
+		"user_name": user.UserName,
+		"phone_number": user.PhoneNumber,
+		"address": user.Address,
+		"role": user.Role,
+	}}
+	_, err = u.UserCollection.UpdateOne(context.TODO(), filter, update)
 	if err != nil {
 		return nil, err
 	}
 	var userResult *Models.User
-	err = u.UserCollection.FindOne(context.TODO(), bson.M{"_id": result.UpsertedID}).Decode(&userResult)
+	err = u.UserCollection.FindOne(context.TODO(), bson.M{"_id": newId}).Decode(&userResult)
 	if err != nil {
 		return nil, err
 	}

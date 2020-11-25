@@ -66,7 +66,7 @@ func Router() http.Handler {
 				r.Post("/", userController.Create)
 				r.Get("/", userController.GetList)
 				r.Get("/{id}", userController.GetById)
-				//r.Put("/{id}", userController.Update)
+				r.Put("/{id}", userController.Update)
 				r.Put("/activate/{id}", userController.Active)
 				r.Put("/deactivate/{id}", userController.DeActive)
 

@@ -8,6 +8,13 @@ type User struct {
 	Address     Address `json:"address" bson:"address"`
 	Role        string  `json:"role"`
 }
+type UserUpdate struct {
+	Name        string  `json:"name" bson:"name"`
+	UserName    string  `json:"user_name" bson:"user_name"`
+	PhoneNumber string  `json:"phone_number" bson:"phone_number"`
+	Address     Address `json:"address" bson:"address"`
+	Role        string  `json:"role"`
+}
 
 type Address struct {
 	City     string `json:"city"bson:"city"`

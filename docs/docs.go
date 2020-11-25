@@ -653,7 +653,7 @@ var doc = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.UpdateUserResponse"
+                            "$ref": "#/definitions/response.StatusUserResponse"
                         }
                     }
                 }
@@ -690,7 +690,7 @@ var doc = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/response.UpdateUserResponse"
+                            "$ref": "#/definitions/response.StatusUserResponse"
                         }
                     }
                 }
@@ -727,6 +727,50 @@ var doc = `{
                         "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/response.GetUserByIdResponse"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "update Book",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "User"
+                ],
+                "summary": "DeActive Book by code",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "user information",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/payload.UserUpdate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/response.UpdateUserResponse"
                         }
                     }
                 }
@@ -958,6 +1002,26 @@ var doc = `{
                 }
             }
         },
+        "payload.UserUpdate": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "$ref": "#/definitions/payload.Address"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "user_name": {
+                    "type": "string"
+                }
+            }
+        },
         "response.CategoryResponse": {
             "type": "object",
             "properties": {
@@ -1091,6 +1155,20 @@ var doc = `{
         "response.StatusProductResponse": {
             "type": "object",
             "properties": {
+                "message": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "response.StatusUserResponse": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "#/definitions/Models.User"
+                },
                 "message": {
                     "type": "string"
                 },

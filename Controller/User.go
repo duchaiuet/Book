@@ -88,9 +88,95 @@ func (u userController) Create(w http.ResponseWriter, r *http.Request) {
 	}
 	render.JSON(w, r, res)
 }
-
+// update user by user godoc
+// @tags User
+// @Summary DeActive Book by code
+// @Description update Book
+// @Accept json
+// @Produce json
+// @Security ApiKeyAuth
+// @Param id path string true "id"
+// @Param user body payload.UserUpdate true "user information"
+// @Success 200 {object} response.UpdateUserResponse
+// @Router /users/{id} [put]
 func (u userController) Update(w http.ResponseWriter, r *http.Request) {
-	panic("implement me")
+	id := chi.URLParam(r, "id")
+	if id == "" {
+		w.WriteHeader(http.StatusBadRequest)
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
+	var pl payload.User
+	err := json.NewDecoder(r.Body).Decode(&pl)
+	if id == "" {
+		w.WriteHeader(http.StatusBadRequest)
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
+	res := &response.UpdateUserResponse{}
+	user, err := u.userBusiness.Get(id)
+	if err != nil {
+		res = &response.UpdateUserResponse{
+			Meta: response.Meta{
+				Success: false,
+				Message: err.Error(),
+			},
+			Data: nil,
+		}
+	}
+	userUpdate := Models.User{}
+	newRole, err := primitive.ObjectIDFromHex(pl.Role)
+	newAdd := Models.Address{
+		City:     pl.Address.City,
+		District: pl.Address.District,
+		Ward:     pl.Address.Ward,
+		Text:     pl.Address.Text,
+	}
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+	if user == nil {
+		res = &response.UpdateUserResponse{
+			Meta: response.Meta{
+				Success: false,
+				Message: "not found",
+			},
+			Data: nil,
+		}
+	} else{
+
+		userUpdate = Models.User{
+			Id:          user.Id,
+			Name:        pl.Name,
+			Role:        newRole,
+			UserName:    pl.UserName,
+			PhoneNumber: pl.PhoneNumber,
+			Address:     newAdd,
+		}
+	}
+
+	result, err := u.userBusiness.Update(id, userUpdate)
+
+	if err != nil {
+		res = &response.UpdateUserResponse{
+			Meta: response.Meta{
+				Success: false,
+				Message: err.Error(),
+			},
+			 Data: nil,
+		}
+	} else {
+		res = &response.UpdateUserResponse{
+			Meta: response.Meta{
+				Success: true,
+				Message: "Success",
+			},
+			Data: result,
+		}
+	}
+	render.JSON(w, r, res)
 }
 
 // Filter get list user godoc
